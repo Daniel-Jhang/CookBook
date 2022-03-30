@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!-- 標註網頁的語系為繁體中文 -->
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooked Well Done - Recipe</title>
+    <link rel="icon" href="./img/cookbook.png" type="image/png" sizes="16x16">
+    <meta name="description" content="提供各式蛋料理食譜的網站">
+    <!-- CSS -->
+    <!-- Normalize個瀏覽器的CSS樣式 -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <!-- 我的CSS檔案 -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div id="recipes" class="main_background">
+        <header class="page_header wrapper">
+            <h1><a href="./index.html"><img class="logo" src="./img/logo.png" alt="Cookbook首頁"></a></h1>
+            <nav>
+                <ul class="main_nav">
+                    <li><a href="./news.html">News</a></li>
+                    <li><a href="./menu.html">Menu</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="wrapper">
+            <h2 class="page_title">Recipe</h2>
+        </div> <!-- /.wrapper -->
+    </div><!-- /#recipes -->
+
+    <div class="news_contents wrapper">
+        <article class="recipe">
+            <header class="post_info">
+                <h2 class="post_title">Scrambled egg - 美式炒蛋</h2>
+                <p class="post_marker">分類<span>食譜</span></p>
+                <p class="post_category">類別 : 看影片學做菜</p>
+            </header>
+
+            <table class="material">
+                <tr>
+                    <td class="table_title" colspan="4">材料</td>
+                    <!-- <td></td> -->
+                    <!-- <td></td> -->
+                    <!-- <td></td> -->
+                    <!-- <td></td> -->
+                </tr>
+                <tr>
+                    <td>鮮蛋2顆</td>
+                    <td>鮮奶油1大匙</td>
+                    <td>奶油30g</td>
+                    <td>胡椒適量</td>
+                </tr>
+            </table>
+
+            <section class="step">
+                <p>步驟：<br>
+                    1. 將2顆蛋打在碗中，加入1大匙鮮奶油（約1個蛋黃的量），將其攪拌均勻成蛋液。<br>
+                    2. 使用不沾鍋，開小火並於鍋中放入30g奶油，待融化後倒入蛋液。<br>
+                    3. 由外而內攪拌蛋液約20下，目測稍微凝固後即可離火，並持續攪拌10下後裝盤，以適當鹽或胡椒調味即可。
+                </p><br>
+                <p class="tips"><samp><i>Tips</i></samp></p>
+                <p>【關鍵在這裡】在倒入蛋液的時候，輕輕搖晃平底鍋讓蛋液散開，不要急著攪動；若蛋汁有起泡，可以用筷子將氣泡戳破，減少蛋泡裡的空氣就能讓炒蛋更加細膩。</p>
+
+            </section>
+
+            <iframe width="840" height="472.5" id="scrambledEggVideo"
+                src="https://www.youtube.com/embed/0zpy2DIBMIc?start=330&end=360" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <br>
+            <button class="fullScreenBtn" onclick="openFullscreen();">全螢幕觀看</button>
+            <p><strong>Tip:</strong> 按“Esc”鍵退出全螢幕模式</p>
+        </article>
+
+        <aside>
+            <h3 class="sub_title">食譜</h3>
+            <ul class="sub_menu">
+                <li><a href="./sun_egg.html">Sun egg - 太陽蛋</a></li>
+                <li><a href="./poached_egg.html">Poached egg - 水波蛋</a></li>
+                <li><a href="./scrambled_egg.html">Scrambled egg - 美式炒蛋</a></li>
+                <li><a href="./cloud_egg.html">Cloud egg - 雲朵蛋</a></li>
+            </ul>
+        </aside>
+    </div> <!-- /.news_contents -->
+
+    <footer>
+        <div class="wrapper">
+            <p><small>&copy; 2021 Cookbook</small></p>
+        </div>
+    </footer>
+
+    <script src="./js/jQuery-v3.6.0.js"></script>
+    <script src="./js/script.js"></script>
+
+    <script>
+        /* ~~~~~~ Fullscreen with JavaScript ~~~~~ */
+
+        // from W3School
+        let scrambledEgg = document.getElementById("scrambledEggVideo");
+        function openFullscreen() {
+            // alert("OK!");
+            if (scrambledEgg.requestFullscreen) {
+                scrambledEgg.requestFullscreen();
+            } else if (scrambledEgg.webkitRequestFullscreen) { /* Safari */
+                scrambledEgg.webkitRequestFullscreen();
+            } else if (scrambledEgg.msRequestFullscreen) { /* IE11 */
+                scrambledEgg.msRequestFullscreen();
+            }
+        }
+    </script>
+
+</body>
+
+</html>
